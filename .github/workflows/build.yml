@@ -1,7 +1,6 @@
-
 name: Build Web Mini APK
 
-on:
+'on':
   workflow_dispatch:
 
 jobs:
@@ -15,7 +14,6 @@ jobs:
       - name: Extract project ZIP
         run: |
           unzip -o WebMini-Siap-Build.zip -d extracted
-          cp -r extracted/.github/. .
           cp -r extracted/app .
           cp extracted/build.gradle .
           cp extracted/gradle.properties .
